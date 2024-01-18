@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.toppage-header {
+  width: 100vw;
+  display: flex;
+  margin: 2vh 33vw;
+}
+
+.logo {
+  font-size: 60px;
+  color: #1c8c42;
+  font-family: 'Stick', sans-serif;
+  text-decoration: none;
+  margin-top: 27px;
+}
+
+.user-nav {
+  font-size: 25px;
+  font-family: 'Stick', sans-serif;
+  gap: 30px;
+  display: flex;
+  margin-top: 73px;
+  margin-left: 10vw;
+}
+
+.login {
+  text-decoration: none;
+}
+
+.sign-up {
+  text-decoration: none;
+}
+
+a:not(.logo) {
+  color: black
+}
