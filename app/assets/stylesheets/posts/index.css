@@ -1,0 +1,146 @@
+html,body {
+  overflow-x: hidden;
+}
+
+/* --- ヘッダー下部 アプリ看板 --- */
+
+.index-img-title {
+  position: relative;
+}
+
+.index-img {
+  width: 100vw;
+  height: 40vh;
+  opacity: 60%;
+  object-fit: cover;
+}
+
+.service-title {
+  position: absolute;
+  padding: 1px 10px 1px 1px;
+  top: 80px;
+  left: 250px;
+  font-size: 50px;
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+
+.service-title-sub {
+  position: absolute;
+  padding: 5px;
+  top: 160px;
+  left: 550px;
+  font-size: 50px;
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+
+/* --- フェードイン部分 --- */
+
+.service-title span {
+  opacity: 0;
+  transform: translateY(20px);
+  display: block;
+  background-color: white;
+}
+
+.service-title-sub span {
+  opacity: 0;
+  transform: translateY(20px);
+  display: block;
+  background-color: white;
+}
+
+.service-title span:first-child {
+  animation: catch_anime 1s forwards 1s;
+}
+
+.service-title-sub span:first-child {
+  animation: catch_anime 1s forwards 2s;
+}
+
+@keyframes catch_anime {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- 新規投稿 文字部分 --- */
+
+.new-posts-index {
+  width: 100vw;
+  padding: 0 40vw;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+
+.new-cnt-img {
+  object-fit: contain;
+  background-color: #e6e6fa;
+}
+
+.new-cnt {
+  font-size: 30px;
+  background-color: #e6e6fa;
+}
+
+/* --- 投稿一覧 --- */
+
+.posts-lists {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.list {
+  margin-left: 2vw;
+  margin-top: 2vh;
+}
+
+.posts-img {
+  height: 33vh;
+  width: 50vh;
+}
+
+.posts-info {
+  font-size: 20px;
+}
+
+/* --- 新規投稿 下部 --- */
+
+.search-nav {
+  width: 100vw;
+  padding: 0 30vw;
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.search-prefecture {
+  font-size: 30px;
+  background-color: #1c8c42;
+}
+
+.new-post {
+  font-size: 30px;
+  margin-top: 3vh;
+  background-color: #0aff84;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Kaisei HarunoUmi', serif;
+}
+
+.search-prefecture a:hover {
+  color: white;
+}
+
+.new-post a:hover {
+  color: white;
+}
