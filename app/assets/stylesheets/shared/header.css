@@ -2,37 +2,40 @@
   box-sizing: border-box;
 }
 
-.toppage-header {
+.header {
   width: 100vw;
   display: flex;
-  margin: 2vh 33vw;
 }
 
-.logo {
-  font-size: 60px;
-  color: #1c8c42;
+.logo-img-wrap {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.logo-img a {
   font-family: 'Stick', sans-serif;
+  font-size: 30px;
   text-decoration: none;
-  margin-top: 27px;
+  line-height: 50px;
+  color: #1c8c42;
+}
+
+.nav {
+  margin-top: 25px;
 }
 
 .user-nav {
-  font-size: 25px;
-  font-family: 'Stick', sans-serif;
-  gap: 30px;
   display: flex;
-  margin-top: 73px;
-  margin-left: 10vw;
 }
 
-.login {
+.login a, .sign-up a {
+  font-family: 'Stick', sans-serif;
+  font-size: 20px;
+  border: solid 1px;
+  padding: 3px;
+  margin-left: 30px;
   text-decoration: none;
-}
-
-.sign-up {
-  text-decoration: none;
-}
-
-a:not(.logo) {
-  color: black
+  color: black;
 }
