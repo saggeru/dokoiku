@@ -9,6 +9,7 @@ html,body {
 }
 
 .index-img {
+  margin-top: 2vh;
   width: 100vw;
   height: 40vh;
   opacity: 60%;
