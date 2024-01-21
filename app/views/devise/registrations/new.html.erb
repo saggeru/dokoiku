@@ -7,17 +7,16 @@
   </div>
 
   <div class='side-right'>
-
-    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
     
+    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+    <%= render "shared/error_message", model: f.object %>
+
     <div class='side-right-form'>
       <div class='form-text-wrap'>
         <label class='form-text'>ユーザーアイコン</label>
         <span class='required-item'>必須</span>
         <div class='img-up-wrap'>
-          <label class='img-up'>ここをクリックして画像をアップロード！
-          <input type='file' class='hidden'>
-          </label>
+          <%= f.file_field :image %>
         </div>
       </div>
     </div>
