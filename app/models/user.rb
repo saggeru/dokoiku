@@ -8,8 +8,8 @@ class User < ApplicationRecord
 
   with_options presence: true do
     validates :name, :image
-    validates :dokoiku_name, uniqueness: true, format: { with: /^[0-9a-zA-Z]{,2}*$/ }
+    validates :dokoiku_name, uniqueness: true, format: { with: /\A[0-9a-zA-Z]{,2}\z/ }
   end
-  validates :password, format: { with: ^([a-zA-Z0-9]{8,})$ message: "Include both letters and numbers" }
+  validates :password, format: { with: /\A[a-zA-Z0-9]{8,}\z/, message: "Include both letters and numbers" }
 
 end
