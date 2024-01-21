@@ -1,0 +1,99 @@
+.registration-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* --- 左側部分 --- */
+
+.side-left {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  background-color: #c1ffe0;
+}
+
+.side-left-cnt span {
+  font-family: 'Stick', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: #1c8c42;
+}
+
+.side-left-cnt {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 60px;
+  color: black;
+  text-align: center;
+}
+
+/* --- フォーム部分 --- */
+
+.side-right {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.required-item {
+  font-size: 11px;
+  color: white;
+  background-color: #f62e36;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+.img-up-wrap {
+  width: 100%;
+  margin: 2px 0 15px 0;
+  padding: 5px 15px;
+  border: solid 2px #bebebe;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.user-form {
+  width: 100%;
+  margin: 2px 0 15px 0;
+  padding: 5px 15px;
+  border: solid 2px #bebebe;
+  border-radius: 5px;
+}
+
+/* --- 会員登録ボタン --- */
+
+.registration-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.registration-red-btn {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: #f62e36;
+  border: none;
+  border-radius: 5px;
+}
+
+.registration-red-btn:hover {
+  opacity: 70%;
+}
