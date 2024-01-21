@@ -1,0 +1,61 @@
+<%= render "shared/header" %>
+
+<div class='index-main'>
+<!-- ヘッダー下部 ざっくりアプリ説明 -->
+  <div class='index-img-title'>
+    <%= image_tag('season.jpg', class: 'index-img') %>
+    <div class='service-title'><span>ドコイク で</span></div>
+    <div class='service-title-sub'><span>自分史 を 作ろう</span></div>
+  </div>
+
+<!-- ここから 新規投稿一覧 -->
+  <div class='new-posts-index'>
+    <div class='new-cnt'><span><%= image_tag('ume.png', size: '50x50', class: 'new-cnt-img') %> 新 規 投 稿</span></div>
+  </div>
+  <div class='six-posts'>
+    <ul class='posts-lists'>
+      <li class='list'>
+        <div class='posts-img-cnt'>
+          <%= image_tag('test.jpg', class: 'posts-img') %>
+        </div>
+        <div class='posts-info'>
+          動作 位置確認
+        <div>
+      </li>
+      <li class='list'>
+        <div class='posts-img-cnt'>
+          <%= image_tag('test.jpg', class: 'posts-img') %>
+        </div>
+        <div class='posts-info'>
+          動作 位置確認
+        <div>
+      </li>
+      <li class='list'>
+        <div class='posts-img-cnt'>
+          <%= image_tag('test.jpg', class: 'posts-img') %>
+        </div>
+        <div class='posts-info'>
+          動作 位置確認
+        <div>
+      </li>
+      <li class='list'>
+        <div class='posts-img-cnt'>
+          <%= image_tag('test.jpg', class: 'posts-img') %>
+        </div>
+        <div class='posts-info'>
+          動作 位置確認
+        <div>
+      </li>
+    </ul>
+    <div class='search-nav'>
+      <div class='search-prefecture'>
+        <%= link_to '都 道 府 県 か ら 探 す', root_path %>
+      </div>
+      <div class='new-post'>
+        <%= link_to '投 稿 す る', root_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

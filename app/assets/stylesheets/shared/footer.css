@@ -1,0 +1,27 @@
+.footer-box {
+  width: 100vw;
+  height: 15vh;
+  background-color: #404040;
+  margin-top: 20vh;
+  padding: 3.5vh 5vw;
+}
+
+.footer-index {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app-exp {
+  color: white;
+}
+
+.app-free-mtrl {
+  color: white;
+}
+
+.footer-logo {
+  color: white;
+  text-align: center;
+  padding-top: 5vh;
+}
