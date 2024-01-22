@@ -6,20 +6,20 @@
 
     <div class='side-left-form'>
       <div class='form-text-wrap'>
-        <label class='form-text'>メールアドレス</label>
+        <label for='user_email' class='form-text'>メールアドレス</label>
       </div>
     </div>
-    <%= f.email_field :email, class: 'user-form' %>
+    <%= f.email_field :email, class: 'user-form', autofocus: true %>
     
     <div class='side-left-form'>
       <div class='form-text-wrap'>
-        <label class='form-text'>パスワード</label>
+        <label for='user_password' class='form-text'>パスワード</label>
       </div>
     </div>
-    <%= f.password_field :password, class: 'user-form' %>
+    <%= f.password_field :password, class: 'user-form', autofocus: true %>
 
     <div class='login-btn'>
-      <%= f.submit "ログイン", class:"login-red-btn" %>
+      <%= f.submit "ログイン", class:"login-red-btn", autofocus: true %>
     </div>
   </div>
   <% end %>
