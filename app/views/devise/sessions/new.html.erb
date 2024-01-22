@@ -1,0 +1,35 @@
+<div class='registration-main'>
+  <div class='side-left-login'>
+    
+    <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+    <%= render "shared/error_message", model: f.object %>
+
+    <div class='side-left-form'>
+      <div class='form-text-wrap'>
+        <label class='form-text'>メールアドレス</label>
+      </div>
+    </div>
+    <%= f.email_field :email, class: 'user-form' %>
+    
+    <div class='side-left-form'>
+      <div class='form-text-wrap'>
+        <label class='form-text'>パスワード</label>
+      </div>
+    </div>
+    <%= f.password_field :password, class: 'user-form' %>
+
+    <div class='login-btn'>
+      <%= f.submit "ログイン", class:"login-red-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <div class='side-right-login'>
+    <div class='side-right-cnt'>
+      <span>ドコイク</span>
+      <br>ログイン
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

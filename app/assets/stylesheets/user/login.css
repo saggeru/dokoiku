@@ -1,0 +1,85 @@
+.login-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* --- 右側部分 --- */
+
+.side-right-login {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #efffef;
+}
+
+.side-right-cnt span {
+  font-family: 'Stick', sans-serif;
+  font-size: 100px;
+  font-weight: bold;
+  color: #1c8c42;
+}
+
+.side-right-cnt {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 60px;
+  color: black;
+  text-align: center;
+}
+
+/* --- フォーム部分 --- */
+
+.side-left-login {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.required-item {
+  font-size: 11px;
+  color: white;
+  background-color: #f62e36;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+.user-form {
+  width: 100%;
+  margin: 2px 0 15px 0;
+  padding: 5px 15px;
+  border: solid 2px #bebebe;
+  border-radius: 5px;
+}
+
+/* --- ログインボタン --- */
+
+.login-btn {
+  width: 100%;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.login-red-btn {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: #f62e36;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-red-btn:hover {
+  opacity: 70%;
+}

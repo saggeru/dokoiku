@@ -9,6 +9,7 @@ html,body {
 }
 
 .index-img {
+  margin-top: 2vh;
   width: 100vw;
   height: 40vh;
   opacity: 60%;
@@ -99,7 +100,7 @@ html,body {
 
 .list {
   margin-left: 2vw;
-  margin-top: 2vh;
+  margin-top: 1vh;
 }
 
 .posts-img {
@@ -116,7 +117,7 @@ html,body {
 .search-nav {
   width: 100vw;
   padding: 0 30vw;
-  margin-top: 10vh;
+  margin: 15vh 0;
   text-align: center;
 }
 
