@@ -5,7 +5,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.text :text,             null: false
       t.text :text2
       t.text :text3
-      t.text :recomemend,       null: false
+      t.text :recommend,       null: false
       t.text :disappointed
       t.string :place,          null:false
       t.float :latitude

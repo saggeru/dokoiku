@@ -44,7 +44,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_01_22_052107) do
     t.text "text", null: false
     t.text "text2"
     t.text "text3"
-    t.text "recomemend", null: false
+    t.text "recommend", null: false
     t.text "disappointed"
     t.string "place", null: false
     t.float "latitude"
