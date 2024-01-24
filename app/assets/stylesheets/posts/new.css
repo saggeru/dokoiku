@@ -1,0 +1,93 @@
+.preview-container img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+}
+
+.new-post-main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #efffef;
+}
+
+.new-post-page-title-wrap {
+  width: 100%;
+  margin-bottom: 2vh;
+  padding: 3% 20%;
+  margin-bottom: 50px;
+  border-bottom: #bebebe 1px solid;
+}
+
+.new-post-page-title {
+  font-family: 'Stick', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.new-post-main-wrap {
+  width: 80%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.form-text-wrap {
+  width: 80%;
+}
+
+.new-form-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.new-post-form {
+  width: 100%;
+  margin: 2px 0 30px 0;
+  padding: 5px 15px;
+  border: solid 2px #bebebe;
+  border-radius: 5px;
+}
+
+.any-item {
+  font-size: 11px;
+  color: white;
+  background-color: black;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+/* --- google map 部分 --- */
+
+#map {
+  width: 100%;
+  height: 350px;
+  text-align: center;
+}
+
+/* --- 新規投稿ボタン部分 --- */
+
+.submit-btn {
+  width: 40%;
+  text-align: center;
+  margin: 10vh 0;
+}
+
+.submit-post-btn {
+  width: 100%;
+  height: 50px;
+  color: white;
+  background-color: #f62e36;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit-post-btn:hover {
+  opacity: 70%;
+}
