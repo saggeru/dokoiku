@@ -12,41 +12,30 @@
   <div class='new-posts-index'>
     <div class='new-cnt'><span><%= image_tag('ume.png', size: '50x50', class: 'new-cnt-img') %> 新 規 投 稿</span></div>
   </div>
+  <% @posts.each do |post| %>
   <div class='six-posts'>
     <ul class='posts-lists'>
       <li class='list'>
         <div class='posts-img-cnt'>
-          <%= image_tag('test.jpg', class: 'posts-img') %>
+          <%= image_tag post.images[0], class: 'posts-img' %>
         </div>
-        <div class='posts-info'>
-          動作 位置確認
-        <div>
-      </li>
-      <li class='list'>
-        <div class='posts-img-cnt'>
-          <%= image_tag('test.jpg', class: 'posts-img') %>
+        <div class='post-info'>
+          <div class='posted-title'>
+            <%= post.title %>
+          </div>
+          <div class='posted-tag'>
+            <%= post.prefecture.name %>
+          </div>
         </div>
-        <div class='posts-info'>
-          動作 位置確認
-        <div>
-      </li>
-      <li class='list'>
-        <div class='posts-img-cnt'>
-          <%= image_tag('test.jpg', class: 'posts-img') %>
+        <div class='posted-user-wrap'>
+          <div class='posted-user'>
+            @ <%= post.user.dokoiku_name %>
+          </div>
         </div>
-        <div class='posts-info'>
-          動作 位置確認
-        <div>
-      </li>
-      <li class='list'>
-        <div class='posts-img-cnt'>
-          <%= image_tag('test.jpg', class: 'posts-img') %>
-        </div>
-        <div class='posts-info'>
-          動作 位置確認
-        <div>
       </li>
     </ul>
+  </div>
+  <% end %>
     <div class='search-nav'>
       <div class='search-prefecture'>
         <%= link_to '都 道 府 県 か ら 探 す', root_path %>
@@ -55,7 +44,6 @@
         <%= link_to '投 稿 す る', new_post_path %>
       </div>
     </div>
-  </div>
 </div>
 
 <%= render "shared/footer" %>
