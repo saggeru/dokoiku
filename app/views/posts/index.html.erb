@@ -17,6 +17,7 @@
     <ul class='posts-lists'>
       <% @posts.each do |post| %>
         <li class='list'>
+          <%= link_to post_path(post) do %>
           <div class='posts-img-cnt'>
             <%= image_tag post.images[0], class: 'posts-img' %>
           </div>
@@ -31,6 +32,7 @@
           <div class='posted-user'>
               @ <%= post.user.dokoiku_name %>
           </div>
+          <% end %>
         </li>
       <% end %>
     </ul>
