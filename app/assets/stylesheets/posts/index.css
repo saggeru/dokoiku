@@ -140,11 +140,13 @@ html,body {
 
 .search-prefecture {
   font-size: 30px;
+  font-family: 'Kaisei HarunoUmi', serif;
   background-color: #1c8c42;
 }
 
 .new-post {
   font-size: 30px;
+  font-family: 'Kaisei HarunoUmi', serif;
   margin-top: 3vh;
   background-color: #0aff84;
 }
@@ -152,7 +154,6 @@ html,body {
 a {
   text-decoration: none;
   color: black;
-  font-family: 'Kaisei HarunoUmi', serif;
 }
 
 .search-prefecture a:hover {
