@@ -1,8 +1,12 @@
+/* --- プレビュー表示部分 --- */
+
 .preview-container img {
   width: 100%;
   height: 250px;
   object-fit: contain;
 }
+
+/* --- フォーム部分 --- */
 
 .new-post-main {
   width: 100vw;
