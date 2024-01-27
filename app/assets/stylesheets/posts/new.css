@@ -1,8 +1,12 @@
+/* --- プレビュー表示部分 --- */
+
 .preview-container img {
   width: 100%;
   height: 250px;
   object-fit: contain;
 }
+
+/* --- フォーム部分 --- */
 
 .new-post-main {
   width: 100vw;
@@ -66,7 +70,7 @@
 /* --- google map 部分 --- */
 
 #map {
-  width: 100%;
+  width: 80%;
   height: 350px;
   text-align: center;
 }

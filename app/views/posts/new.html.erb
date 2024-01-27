@@ -47,8 +47,8 @@
 
     <div class='form-text-wrap'>
         <label for='post_disapointed' class='new-form-text'>要注意ポイント</label>
-        <span class='any-item'>必須</span>
-        <%= f.text_area :disapointed, placeholder: "例: △月はとても混んでいた , ◇月はシーズンオフだそうです", class: 'new-post-form', autofocus: true %>
+        <span class='any-item'>任意</span>
+        <%= f.text_area :disappointed, placeholder: "例: △月はとても混んでいた , ◇月はシーズンオフだそうです", class: 'new-post-form', autofocus: true %>
     </div>
 
     <div class='form-text-wrap'>
@@ -70,16 +70,11 @@
     </div>
 
     <div class='form-text-wrap'>
-        <label for='post_place' class='new-form-text'>施設名称</label>
+        <label for='post_place' class='new-form-text'>施設名称 or 住所</label>
         <span class='required-item'>必須</span>
-        <%= f.text_field :place, placeholder: "例: 浅草寺 ※必ず名称で記入してください", class: 'new-post-form', autofocus: true %>
+        <%= f.text_field :place, placeholder: "例: 浅草寺 または 東京都台東区浅草2-3-1", class: 'new-post-form', id: 'address', autofocus: true %>
     </div>
-
-    <div class='form-text-wrap'>
-      <label for='post_disapointed' class='new-form-text'>正式名称の確認用</label>
-      <input type='text_field' class='new-post-form' id='address'>
-      <div id="map"></div>
-    </div>
+    <div id="map"></div>
 
       <div class="submit-btn">
         <%= f.submit '新規投稿', class: 'submit-post-btn' %>
