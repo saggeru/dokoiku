@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
   before_action :find_post, only: [:show, :edit, :update]
+  before_action :move_to_index, only: [:edit, :update]
 
   def index
     @posts = Post.includes(:user).order("created_at DESC").limit(5)
@@ -41,5 +42,11 @@ class PostsController < ApplicationController
 
   def find_post
     @post = Post.find(params[:id])
+  end
+
+  def move_to_index
+    if user_signed_in? && current_user != @post.user
+      redirect_to action: :index
+    end
   end
 end
