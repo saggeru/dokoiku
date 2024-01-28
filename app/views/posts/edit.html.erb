@@ -1,0 +1,87 @@
+<%= render "shared/header" %>
+
+<%= form_with model: @post, local: true do |f| %>
+<div class='new-post-main'>
+  <div class='new-post-main-wrap'>
+    <div class='new-post-page-title-wrap'>
+      <div class='new-post-page-title'>編集ページ</div>
+    </div>
+
+    <%= render "shared/error_message", model: f.object %>
+
+    <div class='form-text-wrap'>
+      <label for='post_title' class='new-form-text'>タイトル</label>
+      <span class='required-item'>必須</span>
+      <%= f.text_field :title, placeholder: "例: 東京タワーにいってきました！", class: 'new-post-form', autofocus: true %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_text' class='new-form-text'>写真について説明</label>
+        <span class='required-item'>必須</span>
+      <div id="previews" class="preview-container"></div>
+        <%= f.file_field :images, name: 'post[images][]', id: 'new-post-img' %>
+        <%= f.text_area :text, placeholder: "例: 〇〇温泉街です。", class: 'new-post-form', autofocus: true %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_text2' class='new-form-text'>2枚目</label>
+        <span class='any-item'>任意</span>
+      <div id="previews2" class="preview-container"></div>
+        <%= f.file_field :images, name: 'post[images][]', id: 'new-post-img2' %>
+        <%= f.text_area :text2, placeholder: "ここに入力", class: 'new-post-form', autofocus: true %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_text3' class='new-form-text'>3枚目</label>
+        <span class='any-item'>任意</span>
+      <div id="previews3" class="preview-container"></div>
+        <%= f.file_field :images, name: 'post[images][]', id: 'new-post-img3' %>
+        <%= f.text_area :text3, placeholder: "ここに入力", class: 'new-post-form', autofocus: true %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_recommend' class='new-form-text'>おすすめポイント</label>
+        <span class='required-item'>必須</span>
+        <%= f.text_area :recommend, placeholder: "例: 〇〇が最高でした！", class: 'new-post-form', autofocus: true %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_disapointed' class='new-form-text'>要注意ポイント</label>
+        <span class='any-item'>任意</span>
+        <%= f.text_area :disappointed, placeholder: "例: △月はとても混んでいた , ◇月はシーズンオフだそうです", class: 'new-post-form', autofocus: true %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_prefecture' class='new-form-text'>都道府県を選択してください</label>
+        <span class='required-item'>必須</span>
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"new-post-form", id:"item-prefecture"}) %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_season' class='new-form-text'>いつ頃訪れましたか？</label>
+        <span class='required-item'>必須</span>
+        <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"new-post-form", id:"item-prefecture"}) %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_point' class='new-form-text'>おすすめ度 (5段階)</label>
+        <span class='required-item'>必須</span>
+        <%= f.collection_select(:point_id, Point.all, :id, :name, {}, {class:"new-post-form", id:"item-prefecture"}) %>
+    </div>
+
+    <div class='form-text-wrap'>
+        <label for='post_place' class='new-form-text'>施設名称 or 住所</label>
+        <span class='required-item'>必須</span>
+        <%= f.text_field :place, placeholder: "例: 浅草寺 または 東京都台東区浅草2-3-1", class: 'new-post-form', id: 'address', autofocus: true %>
+    </div>
+    <div id="map"></div>
+
+      <div class="submit-btn">
+        <%= f.submit '変更する', class: 'submit-post-btn' %>
+      </div>
+  </div>
+</div>
+<% end %>
+
+<%= render "shared/footer" %>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['MAP_API_KEY'] %>&callback=initAutocomplete&libraries=places&v=weekly" defer></script>
