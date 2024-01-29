@@ -61,4 +61,4 @@ function pullDown() {
   })
 }
 
-window.addEventListener('load', pullDown)
+window.addEventListener('turbo:load', pullDown)
