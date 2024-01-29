@@ -138,35 +138,38 @@ html,body {
 
 /* --- 投稿する/都道府県から探す 部分 --- */
 
-.search-nav {
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
-  padding: 0 30vw;
-  margin: 10vh 0 15vh 0;
-  text-align: center;
 }
 
-.search-prefecture {
-  font-size: 30px;
-  font-family: 'Kaisei HarunoUmi', serif;
-  background-color: #1c8c42;
+.left-bar {
+  background-color: #bebebe;
+  padding: 0 30px;
 }
 
-.new-post {
-  font-size: 30px;
-  font-family: 'Kaisei HarunoUmi', serif;
+.center-bar {
+  background-color: #bebebe;
+  padding: 0 30px;
+}
+
+.right-bar {
+  background-color: #bebebe;
+  padding: 0 30px;
+}
+
+.hidden{
+  display: none;
+}
+
+.prefecture-lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 3vh;
-  background-color: #0aff84;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.search-prefecture a:hover {
-  color: white;
-}
-
-.new-post a:hover {
-  color: white;
+.show-lists {
 }
