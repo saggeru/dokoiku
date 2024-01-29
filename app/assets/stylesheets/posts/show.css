@@ -34,15 +34,55 @@
   text-align: center;
 }
 
+.show-point span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fcc800;
+}
+
 .show-prefecture {
   text-align: center;
   margin-bottom: 3vh;
 }
 
-.show-point span {
-  font-size: 20px;
-  font-weight: bold;
-  color: #fcc800;
+/* --- 編集/削除ボタン --- */
+
+.edit-work-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-bottom: 3vh;
+}
+
+.edit-btn-wrap {
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  color: white;
+  font-size: 18px
+}
+
+.edit-btn-wrap:hover {
+  opacity: 70%;
+}
+
+.delete-btn-wrap {
+  background-color: #f62e36;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  color: white;
+  font-size: 18px;
+}
+
+.delete-btn-wrap:hover {
+  opacity: 70%;
 }
 
 .img-set {

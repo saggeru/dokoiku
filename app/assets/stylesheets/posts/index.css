@@ -98,17 +98,24 @@ html,body {
 .posts-lists {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .list {
-  margin: 3vh 2vw;
+  margin-bottom: 5vh;
+  padding: 30px 30px;
+  border: 1px solid #bebebe;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px 0 rgba(43,43,43, 0.5);
 }
 
 .posts-img {
-  height: 33vh;
-  width: 50vh;
+  width: 30vw;
+  height: 40vh;
+  border-radius: 5px;
 }
 
 /* --- 新規投稿画像の下(投稿タイトル/都道府県名/ユーザーID)部分 --- */
@@ -134,7 +141,7 @@ html,body {
 .search-nav {
   width: 100%;
   padding: 0 30vw;
-  margin: 15vh 0;
+  margin: 10vh 0 15vh 0;
   text-align: center;
 }
 

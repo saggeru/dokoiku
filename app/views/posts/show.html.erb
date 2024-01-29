@@ -12,6 +12,18 @@
       <div class='show-prefecture'>
         <%= @post.prefecture.name %>
       </div>
+
+      <% if user_signed_in? && current_user.id == @post.user_id %>
+      <div class='edit-work-btn'>
+        <div class='edit-btn-wrap'>
+          <%= link_to '編集', edit_post_path(@post), method: :get, class: "edit-btn" %>
+        </div>
+        <div class='delete-btn-wrap'>
+          <%= link_to '削除', post_path(@post), data: { turbo_method: :delete }, class:"delete-btn" %>
+        </div>
+      </div>
+      <% end %>
+
     </div>
 
     <div class='img-set'>
