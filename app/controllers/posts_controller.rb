@@ -5,6 +5,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.includes(:user).order("created_at DESC").limit(5)
+    @prefecture = Prefecture.where(id: 2..8)
+    @prefecture2 = Prefecture.where(id: 9..16)
+    @prefecture3 = Prefecture.where(id: 17..25)
+    @prefecture4 = Prefecture.where(id: 26..31)
+    @prefecture5 = Prefecture.where(id: 32..40)
+    @prefecture6 = Prefecture.where(id: 41..48)
   end
 
   def new
