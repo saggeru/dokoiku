@@ -1,0 +1,68 @@
+.search-page-main {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* --- 〇〇県投稿一覧 --- */
+
+.search-pref-index {
+  font-size: 40px;
+  text-align: center;
+  margin: 5vh 0 3vh 0
+}
+
+.pref-post-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.pref-list {
+  margin: 3vh 3vw;
+}
+
+/* --- 画像/タイトル/ユーザーID部分 --- */
+
+.pref-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.pref-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pref-posted-title {
+  font-weight: bold;
+}
+
+.pref-posted-user {
+  text-align: center;
+}
+
+/* --- 投稿がないときに表示(パラメータ(prefecture_id)とマッチしないとき) --- */
+
+.not-yet-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-yet-post {
+  font-size: 26px;
+}
+
+.first-post a {
+  font-size: 22px;
+  color: #1c8c42;
+}
+
+.first-post a:hover {
+  border-bottom: 6px double black;
+}

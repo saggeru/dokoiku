@@ -1,0 +1,39 @@
+<%= render 'shared/header' %>
+<div class='search-page-main'>
+  <div class='search-pref-index'>
+    <%= @prefecture.name %> の投稿一覧
+  </div>
+  <div class='pref-post'>
+    <% if @posts.present? %>
+      <ul class='pref-post-list'>
+        <% @posts.each do |post| %>
+          <li class='pref-list'>
+            <%= link_to post_path(post) do %>
+            <div class='pref-img-cnt'>
+              <%= image_tag post.images[0], class: 'pref-img' %>
+            </div>
+            <div class='pref-info'>
+              <div class='pref-posted-title'>
+                <%= post.title %>
+              </div>
+            </div>
+            <div class='pref-posted-user'>
+              @ <%= post.user.dokoiku_name %>
+            </div>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class='not-yet-wrap'>
+        <div class='not-yet-post'>
+          まだ投稿がありません…
+        </div>
+        <div class='first-post'>
+          <%= link_to '投稿1番のりしよう!', new_post_path %>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
+<%= render 'shared/footer' %>
