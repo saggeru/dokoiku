@@ -74,6 +74,70 @@ html,body {
   }
 }
 
+/* --- メニューバー --- */
+
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.left-bar {
+  width: 100%;
+  background-color: #009944;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid white; 
+  padding: 5px 5px;
+}
+
+.left-bar:hover {
+  color: white;
+}
+
+.center-bar {
+  width: 100%;
+  background-color: #009944;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid white; 
+  padding: 5px 5px;
+}
+
+.center-bar a:hover {
+  color: white;
+}
+
+.right-bar {
+  width: 100%;
+  background-color: #009944;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid white; 
+  padding: 5px 5px;
+}
+
+.right-bar a:hover {
+  color: white;
+}
+
+.hidden{
+  display: none;
+}
+
+.prefecture-lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 /* --- 新規投稿 文字部分 --- */
 
 .new-posts-index {
@@ -134,39 +198,4 @@ html,body {
 .posted-title {
   font-size: 20px;
   font-weight: bold;
-}
-
-/* --- 投稿する/都道府県から探す 部分 --- */
-
-.search-nav {
-  width: 100%;
-  padding: 0 30vw;
-  margin: 10vh 0 15vh 0;
-  text-align: center;
-}
-
-.search-prefecture {
-  font-size: 30px;
-  font-family: 'Kaisei HarunoUmi', serif;
-  background-color: #1c8c42;
-}
-
-.new-post {
-  font-size: 30px;
-  font-family: 'Kaisei HarunoUmi', serif;
-  margin-top: 3vh;
-  background-color: #0aff84;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-.search-prefecture a:hover {
-  color: white;
-}
-
-.new-post a:hover {
-  color: white;
 }

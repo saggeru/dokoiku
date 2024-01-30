@@ -8,6 +8,59 @@
     <div class='service-title-sub'><span>自分史 を 作ろう</span></div>
   </div>
 
+  <div class='nav-bar'>
+    <div class='left-bar'>
+      <ul class='nav-lists'>
+        <li class='prefecture-prefecture' id='lists'>都道府県から探す
+        </li>
+      </ul>
+    </div>
+    <div class='center-bar'>
+      <%= link_to '新規投稿', new_post_path %>
+    </div>
+    <div class='right-bar'>
+      <%= link_to 'マイページ', root_path %>
+    </div>
+  </div>
+  <div class='prefecture-lists'>
+    <ul class='show-lists' hidden id='pull-down'>
+      <% @prefecture.each do |prefecture| %>
+      <%= link_to prefecture.name, searches_path(prefecture.attributes) %>
+      <li></li>
+      <% end %>
+    </ul>
+    <ul class='show-lists2' hidden id='pull-down2'>
+      <% @prefecture2.each do |prefecture2| %>
+      <%= link_to prefecture2.name, searches_path(prefecture2.attributes) %>
+      <li></li>
+      <% end %>
+    </ul>
+    <ul class='show-lists3' hidden id='pull-down3'>
+      <% @prefecture3.each do |prefecture3| %>
+      <%= link_to prefecture3.name, searches_path(prefecture3.attributes) %>
+      <li></li>
+      <% end %>
+    </ul>
+    <ul class='show-lists4' hidden id='pull-down4'>
+      <% @prefecture4.each do |prefecture4| %>
+      <%= link_to prefecture4.name, searches_path(prefecture4.attributes) %>
+      <li></li>
+      <% end %>
+    </ul>
+    <ul class='show-lists5' hidden id='pull-down5'>
+      <% @prefecture5.each do |prefecture5| %>
+      <%= link_to prefecture5.name, searches_path(prefecture5.attributes) %>
+      <li></li>
+      <% end %>
+    </ul>
+    <ul class='show-lists6' hidden id='pull-down6'>
+      <% @prefecture6.each do |prefecture6| %>
+      <%= link_to prefecture6.name, searches_path(prefecture6.attributes) %>
+      <li></li>
+      <% end %>
+    </ul>
+  </div>
+
 <!-- ここから 新規投稿一覧 -->
   <div class='new-posts-index'>
     <div class='new-cnt'><span><%= image_tag('ume.png', size: '50x50', class: 'new-cnt-img') %> 新 規 投 稿</span></div>
@@ -37,14 +90,6 @@
       <% end %>
     </ul>
   </div>
-    <div class='search-nav'>
-      <div class='search-prefecture'>
-        <%= link_to '都 道 府 県 か ら 探 す', root_path %>
-      </div>
-      <div class='new-post'>
-        <%= link_to '投 稿 す る', new_post_path %>
-      </div>
-    </div>
 </div>
 
 <%= render "shared/footer" %>
