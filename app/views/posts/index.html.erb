@@ -18,44 +18,46 @@
     <div class='center-bar'>
       <%= link_to '新規投稿', new_post_path %>
     </div>
+    <% if user_signed_in? %>
     <div class='right-bar'>
-      <%= link_to 'マイページ', root_path %>
+      <%= link_to 'マイページ', user_path(current_user) %>
     </div>
+    <% end %>
   </div>
   <div class='prefecture-lists'>
     <ul class='show-lists' hidden id='pull-down'>
       <% @prefecture.each do |prefecture| %>
-      <%= link_to prefecture.name, searches_path(prefecture.attributes) %>
+      <%= link_to prefecture.name, search_path(prefecture) %>
       <li></li>
       <% end %>
     </ul>
     <ul class='show-lists2' hidden id='pull-down2'>
       <% @prefecture2.each do |prefecture2| %>
-      <%= link_to prefecture2.name, searches_path(prefecture2.attributes) %>
+      <%= link_to prefecture2.name, search_path(prefecture2) %>
       <li></li>
       <% end %>
     </ul>
     <ul class='show-lists3' hidden id='pull-down3'>
       <% @prefecture3.each do |prefecture3| %>
-      <%= link_to prefecture3.name, searches_path(prefecture3.attributes) %>
+      <%= link_to prefecture3.name, search_path(prefecture3) %>
       <li></li>
       <% end %>
     </ul>
     <ul class='show-lists4' hidden id='pull-down4'>
       <% @prefecture4.each do |prefecture4| %>
-      <%= link_to prefecture4.name, searches_path(prefecture4.attributes) %>
+      <%= link_to prefecture4.name, search_path(prefecture4) %>
       <li></li>
       <% end %>
     </ul>
     <ul class='show-lists5' hidden id='pull-down5'>
       <% @prefecture5.each do |prefecture5| %>
-      <%= link_to prefecture5.name, searches_path(prefecture5.attributes) %>
+      <%= link_to prefecture5.name, search_path(prefecture5) %>
       <li></li>
       <% end %>
     </ul>
     <ul class='show-lists6' hidden id='pull-down6'>
       <% @prefecture6.each do |prefecture6| %>
-      <%= link_to prefecture6.name, searches_path(prefecture6.attributes) %>
+      <%= link_to prefecture6.name, search_path(prefecture6) %>
       <li></li>
       <% end %>
     </ul>
@@ -83,7 +85,7 @@
             </div>
           </div>
           <div class='posted-user'>
-              @ <%= post.user.dokoiku_name %>
+            <%= link_to post.user.dokoiku_name, user_path(post.user) %>
           </div>
           <% end %>
         </li>
