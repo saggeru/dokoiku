@@ -10,7 +10,7 @@
         満足度 : <span><%= @post.point.name %></span>
       </div>
       <div class='show-prefecture'>
-        <%= @post.prefecture.name %>
+        <%= link_to @post.prefecture.name, search_path(@post.prefecture) %>
       </div>
 
       <% if user_signed_in? && current_user.id == @post.user_id %>
