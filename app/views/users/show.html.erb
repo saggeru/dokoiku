@@ -21,10 +21,10 @@
   </div>
   <div class='ff-info'>
     <div class='follow'>
-      フォロー 0人
+      フォロー <%= @user.active_relationships.count %>人
     </div>
     <div class='follower'>
-      フォロワー 0人
+      フォロワー <%= @user.passive_relationships.count %>人
     </div>
   </div>
   <div class='my-post'>
