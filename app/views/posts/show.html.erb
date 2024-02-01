@@ -9,8 +9,11 @@
       <div class='show-point'>
         満足度 : <span><%= @post.point.name %></span>
       </div>
+      <div class='show-user'>
+        投稿者 : <%= link_to @post.user.name, user_path(@post.user) %>
+      </div>
       <div class='show-prefecture'>
-        <%= @post.prefecture.name %>
+        <%= link_to @post.prefecture.name, search_path(@post.prefecture) %>
       </div>
 
       <% if user_signed_in? && current_user.id == @post.user_id %>
@@ -28,26 +31,26 @@
 
     <div class='img-set'>
       <%= image_tag @post.images[0], class: 'show-img' %>
-    </div>
-    <div class='show-text'>
-      <%= @post.text %>
+      <div class='show-text'>
+        <%= @post.text %>
+      </div>
     </div>
 
     <% if @post.images[1].present? %>
       <div class='img-set'>
         <%= image_tag @post.images[1], class: 'show-img' %>
-      </div>
-      <div class='show-text'>
-        <%= @post.text2 %>
+        <div class='show-text'>
+          <%= @post.text2 %>
+        </div>
       </div>
     <% end %>
 
     <% if @post.images[2].present? %>
       <div class='img-set'>
       <%= image_tag @post.images[2], class: 'show-img' %>
-      </div>
-      <div class='show-text'>
-        <%= @post.text3 %>
+        <div class='show-text'>
+          <%= @post.text3 %>
+        </div>
       </div>
     <% end %>
 

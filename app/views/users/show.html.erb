@@ -1,3 +1,4 @@
+<%= render 'shared/header' %>
 <div class='my-page-main'>
   <div class='my-page-info'>
     <div class='my-icon'>
@@ -10,17 +11,21 @@
       ( @<%= @user.dokoiku_name %> )
     </div>
     <% if user_signed_in? && current_user.id != @user.id %>
-    <div class='follow-btn'>
-      フォローする
+    <div class='follow-btn-wrap'>
+      <% if @user.followed_by?(current_user) %>
+        <%= link_to 'フォロー中', user_relationship_path(@user.id), class: 'delete-follow-btn', data: { turbo_method: :delete } %>
+      <% else %>
+        <%= link_to 'フォローする', user_relationships_path(@user.id), class: 'follow-btn', data: { turbo_method: :post } %>
+      <% end %>
     </div>
     <% end %>
   </div>
   <div class='ff-info'>
     <div class='follow'>
-      フォロー 0人
+      フォロー <%= @user.active_relationships.count %> 人
     </div>
     <div class='follower'>
-      フォロワー 0人
+      フォロワー <%= @user.passive_relationships.count %> 人
     </div>
   </div>
   <div class='my-post'>
@@ -53,3 +58,4 @@
     <% end %>
   </div>
 </div>
+<%= render 'shared/footer' %>

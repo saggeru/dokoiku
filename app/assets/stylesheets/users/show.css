@@ -1,7 +1,12 @@
+.my-page-main {
+  height: 100vh;
+}
+
 /* --- アイコン/名前/id --- */
 
 .my-page-info {
   display: flex;
+  padding: 1.5vh 0 0 3vw;
 }
 
 .icon {
@@ -23,20 +28,40 @@
   align-items: end;
   font-size: 17px;
   color: #4d4d4d;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
-.follow-btn {
+/* --- フォローボタン --- */
+
+.follow-btn-wrap {
   display: flex;
   justify-content: center;
   align-items: end;
   padding-left: 15px;
 }
 
+.follow-btn {
+  font-size: 14px;
+  color: white;
+  border: 1px solid #4d4d4d;
+  border-radius: 8px;
+  padding: 3px 25px;
+  background-color: #4d4d4d;
+}
+
+.delete-follow-btn {
+  font-size: 14px;
+  border: 1px solid #4d4d4d;
+  border-radius: 8px;
+  padding: 3px 25px;
+}
+
 /* --- フォロー/フォロワー --- */
 
 .ff-info {
   display: flex;
+  gap: 15px;
+  padding: 3px 0 0 8.3vw;
 }
 
 /* --- 投稿一覧 --- */

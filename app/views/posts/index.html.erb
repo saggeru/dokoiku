@@ -81,11 +81,11 @@
               <%= post.title %>
             </div>
             <div class='posted-tag'>
-              <%= post.prefecture.name %>
+              <%= link_to post.prefecture.name, search_path(post.prefecture) %>
             </div>
           </div>
           <div class='posted-user'>
-            <%= link_to post.user.dokoiku_name, user_path(post.user) %>
+            @ <%= link_to post.user.dokoiku_name, user_path(post.user) %>
           </div>
           <% end %>
         </li>
