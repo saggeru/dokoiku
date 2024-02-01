@@ -85,41 +85,48 @@ html,body {
 
 .left-bar {
   width: 100%;
-  background-color: #009944;
-  font-size: 20px;
+  font-size: 23px;
   text-align: center;
-  border: 1px solid white; 
   padding: 5px 5px;
 }
 
 .left-bar:hover {
   color: white;
+  background-color: #4d4d4d;
 }
 
 .center-bar {
   width: 100%;
-  background-color: #009944;
-  font-size: 20px;
+  font-size: 23px;
   text-align: center;
-  border: 1px solid white; 
   padding: 5px 5px;
 }
 
-.center-bar a:hover {
+.center-bar:hover {
   color: white;
+  background-color: #4d4d4d;
+}
+
+.center-bar:hover a {
+  color: white;
+  background-color: #4d4d4d;
 }
 
 .right-bar {
   width: 100%;
-  background-color: #009944;
-  font-size: 20px;
+  font-size: 23px;
   text-align: center;
-  border: 1px solid white; 
   padding: 5px 5px;
 }
 
-.right-bar a:hover {
+.right-bar:hover {
   color: white;
+  background-color: #4d4d4d;
+}
+
+.right-bar:hover a {
+  color: white;
+  background-color: #4d4d4d;
 }
 
 .hidden{
