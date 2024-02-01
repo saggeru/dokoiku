@@ -1,3 +1,4 @@
+<%= render 'shared/header' %>
 <div class='my-page-main'>
   <div class='my-page-info'>
     <div class='my-icon'>
@@ -21,10 +22,10 @@
   </div>
   <div class='ff-info'>
     <div class='follow'>
-      フォロー <%= @user.active_relationships.count %>人
+      フォロー <%= @user.active_relationships.count %> 人
     </div>
     <div class='follower'>
-      フォロワー <%= @user.passive_relationships.count %>人
+      フォロワー <%= @user.passive_relationships.count %> 人
     </div>
   </div>
   <div class='my-post'>
@@ -57,3 +58,4 @@
     <% end %>
   </div>
 </div>
+<%= render 'shared/footer' %>

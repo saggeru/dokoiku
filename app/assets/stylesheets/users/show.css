@@ -1,7 +1,12 @@
+.my-page-main {
+  height: 100vh;
+}
+
 /* --- アイコン/名前/id --- */
 
 .my-page-info {
   display: flex;
+  padding: 1.5vh 0 0 3vw;
 }
 
 .icon {
@@ -55,6 +60,8 @@
 
 .ff-info {
   display: flex;
+  gap: 15px;
+  padding: 3px 0 0 8.3vw;
 }
 
 /* --- 投稿一覧 --- */
