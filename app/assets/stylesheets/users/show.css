@@ -1,0 +1,74 @@
+/* --- アイコン/名前/id --- */
+
+.my-page-info {
+  display: flex;
+}
+
+.icon {
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.my-name {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.my-id {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 17px;
+  color: #4d4d4d;
+  padding-left: 10px;
+}
+
+.follow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-left: 15px;
+}
+
+/* --- フォロー/フォロワー --- */
+
+.ff-info {
+  display: flex;
+}
+
+/* --- 投稿一覧 --- */
+
+.my-post-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.my-list {
+  margin: 3vh 3vw;
+}
+
+.my-posted-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.my-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-posted-title {
+  font-weight: bold;
+}
+
+.my-post-visited {
+  text-align: center;
+}

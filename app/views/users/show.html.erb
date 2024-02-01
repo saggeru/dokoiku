@@ -1,0 +1,55 @@
+<div class='my-page-main'>
+  <div class='my-page-info'>
+    <div class='my-icon'>
+      <%= image_tag @user.image.variant(resize: '100x100'), class: 'icon' %>
+    </div>
+    <div class='my-name'>
+      <%= @user.name %>
+    </div>
+    <div class='my-id'>
+      ( @<%= @user.dokoiku_name %> )
+    </div>
+    <% if user_signed_in? && current_user.id != @user.id %>
+    <div class='follow-btn'>
+      フォローする
+    </div>
+    <% end %>
+  </div>
+  <div class='ff-info'>
+    <div class='follow'>
+      フォロー 0人
+    </div>
+    <div class='follower'>
+      フォロワー 0人
+    </div>
+  </div>
+  <div class='my-post'>
+    <% if @posts.present? %>
+      <ul class='my-post-list'>
+        <% @posts.each do |post| %>
+          <li class='my-list'>
+            <%= link_to post_path(post) do %>
+            <div class='my-img-cnt'>
+              <%= image_tag post.images[0], class: 'my-posted-img' %>
+            </div>
+            <div class='my-info'>
+              <div class='my-posted-title'>
+                <%= post.title %>
+              </div>
+            </div>
+            <div class='my-post-visited'>
+              <%= post.prefecture.name %>
+            </div>
+          <% end %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <div class='not-yet-wrap'>
+        <div class='not-yet-post'>
+          まだ投稿がありません…
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
