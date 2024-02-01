@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :posts
   resources :searches, only: [:show]
   resources :users, only: [:show] do
-    resources :reletionships, only: [:create, :destroy]
+    resources :relationships, only: [:create, :destroy]
   end
 end
