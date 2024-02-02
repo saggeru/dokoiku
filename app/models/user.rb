@@ -22,6 +22,6 @@ class User < ApplicationRecord
     validates :name, :image
     validates :dokoiku_name, uniqueness: true, format: { with: /\A[0-9a-zA-Z]{2,}\z/ }
   end
-  validates :password, format: { with: /\A[a-zA-Z0-9]{8,}\z/, message: "Include both letters and numbers" }
+  validates :password, format: { with: /\A[a-zA-Z0-9]{8,}\z/, message: "は8文字以上の半角英数字で入力してください" }
 
 end
