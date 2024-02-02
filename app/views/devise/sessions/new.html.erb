@@ -2,7 +2,11 @@
   <div class='side-left-login'>
     
     <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-    <%= render "shared/error_message", model: f.object %>
+
+  <div class='login-flash-message'>
+    <%= flash[:notice] %>
+    <%= flash[:alert] %>
+  </div>
 
     <div class='side-left-form'>
       <div class='form-text-wrap'>
@@ -19,7 +23,10 @@
     <%= f.password_field :password, class: 'user-form', autofocus: true %>
 
     <div class='login-btn'>
-      <%= f.submit "ログイン", class:"login-red-btn", autofocus: true %>
+      <%= f.submit 'ログイン', class:"login-red-btn", autofocus: true %>
+    </div>
+    <div class='user-entry'>
+      <%= link_to 'アカウントをお持ちでない方', new_user_registration_path, class: 'user-entry-btn' %>
     </div>
   </div>
   <% end %>

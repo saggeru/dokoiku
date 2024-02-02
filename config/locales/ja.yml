@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        dokoiku_name: ユーザーID
+        name: ニックネーム
+        image: 画像
+      post:
+        title: タイトル
+        text: 画像説明文
+        recommend: おすすめポイント
+        prefecture_id: 都道府県
+        season_id: いつ頃訪れましたか?
+        point_id: おすすめ度
+        place: 住所もしくは施設名
+        images: 画像
