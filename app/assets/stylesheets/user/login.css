@@ -35,8 +35,9 @@
 
 .login-flash-message {
   font-size: 18px;
+  color: #f62e36
   text-align: center;
-  color: red;
+  padding-bottom: 10px;
 }
 
 /* --- フォーム部分 --- */
