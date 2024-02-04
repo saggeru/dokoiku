@@ -1,3 +1,32 @@
+/* --- いいねボタン --- */
+
+.favorite {
+  line-height: 25px;
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+}
+
+.like-count span {
+  font-size: 25px;
+  color: red;
+}
+
+.post-likes {
+  color: white;
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+.post-liked {
+  color: black;
+  background-color: white;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
 .show-main {
   width: 100vw;
   background-color: #efffef;
@@ -89,6 +118,11 @@
   opacity: 70%;
 }
 
+.favorite-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* --- ここから本文 --- */
 
 .img-set {
@@ -106,14 +140,16 @@
   width: 50%;
   height: 40vh;
   object-fit: contain;
+  margin-bottom: 2vh;
 }
 
 .show-text {
-  font-size: 20px;
-  padding: 0 13vw;
-  margin-top: 2vh;
-  overflow-y: auto;
+  width: 80%;
   max-height: 30vh;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 3vh;
+  overflow-y: auto;
 }
 
 .show-recommend-wrap {
@@ -121,11 +157,16 @@
   text-align: center;
   padding: 0 20px;
   background-color: #ffeaff;
+  overflow: auto;
 }
 
 .show-recommend {
+  width: 80%;
+  max-height: 20vh;
   font-size: 20px;
+  text-align: center;
   margin: 2vh 0 5vh 0;
+  overflow-y: auto;
 }
 
 .show-disappointed-wrap {
@@ -133,11 +174,16 @@
   text-align: center;
   padding: 0 20px;
   background-color: #eaf4ff;
+  overflow: auto;
 }
 
 .show-disappointed {
+  width: 80%;
+  max-height: 20vh;
   font-size: 20px;
+  text-align: center;
   margin: 2vh 0 5vh 0;
+  overflow-y: auto;
 }
 
 .show-place span {

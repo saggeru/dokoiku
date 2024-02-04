@@ -3,6 +3,18 @@
 <div class='show-main'>
   <div class='show-cnt-wrap'>
     <div class='show-title-wrap'>
+      <div class='favorite'>
+        <% if user_signed_in? %>
+          <% if @post.liked_by?(current_user) %>
+            <%= link_to 'いいねしました', post_like_path(@post.id), data: { turbo_method: :delete }, class: 'post-liked' %>
+          <% else %>
+            <%= link_to 'いいねする?', post_likes_path(@post.id), data: { turbo_method: :post }, class: 'post-likes' %>
+          <% end %>
+        <% end %>
+        <div class='like-count'>
+          <span>♥</span><%= @like_count %>
+        </div>
+      </div>
       <div class='show-title'>
         <%= @post.title %>
       </div>
@@ -26,7 +38,6 @@
         </div>
       </div>
       <% end %>
-
     </div>
 
     <div class='img-set'>
