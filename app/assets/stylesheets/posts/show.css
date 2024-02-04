@@ -1,3 +1,32 @@
+/* --- いいねボタン --- */
+
+.favorite {
+  line-height: 25px;
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+}
+
+.like-count span {
+  font-size: 25px;
+  color: red;
+}
+
+.post-likes {
+  color: white;
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+.post-liked {
+  color: black;
+  background-color: white;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
 .show-main {
   width: 100vw;
   background-color: #efffef;
