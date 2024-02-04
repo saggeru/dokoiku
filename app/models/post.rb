@@ -17,4 +17,8 @@ class Post < ApplicationRecord
     validates :images, length: { minimum: 1, maximum: 3, message: "は1枚以上3枚以下にしてください" }
   end
 
+  def liked_by?(user)
+    likes.where(user_id: user.id).exists?
+  end
+
 end
