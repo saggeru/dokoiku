@@ -59,6 +59,28 @@
   padding: 3px 25px;
 }
 
+/* --- 編集ボタン --- */
+
+.user-edit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-left: 15px;
+}
+
+.user-edit {
+  font-size: 14px;
+  color: white;
+  border: 1px solid #4d4d4d;
+  border-radius: 8px;
+  padding: 3px 25px;
+  background-color: #4d4d4d;
+}
+
+.user-edit:hover {
+  opacity: 70%;
+}
+
 /* --- フォロー/フォロワー --- */
 
 .ff-info {
