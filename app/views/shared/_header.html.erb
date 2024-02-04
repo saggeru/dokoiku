@@ -11,7 +11,7 @@
         <li class='logout'><%= link_to 'ログアウト', destroy_user_session_path, data: {turbo_method: :delete} %></li>
         <li>
           <%= link_to user_path(current_user.id) do %>
-          <%= image_tag current_user.image.variant(resize: '60x60'), class: 'user-icon' %>
+          <%= image_tag current_user.image, class: 'user-icon' %>
           <% end %>
         </li>
       <% else %>
