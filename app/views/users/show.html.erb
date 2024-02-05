@@ -8,9 +8,13 @@
       <%= @user.name %>
     </div>
     <div class='my-id'>
+      <% if @user.is_deleted %>
+      ( 退会済みのアカウントです )
+      <% else %>
       ( @<%= @user.dokoiku_name %> )
+      <% end %>
     </div>
-    <% if user_signed_in? && current_user.id != @user.id %>
+    <% if user_signed_in? && current_user.id != @user.id && !@user.is_deleted %>
     <div class='follow-btn-wrap'>
       <% if @user.followed_by?(current_user) %>
         <%= link_to 'フォロー中', user_relationship_path(@user.id), class: 'delete-follow-btn', data: { turbo_method: :delete } %>
