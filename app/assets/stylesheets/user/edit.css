@@ -1,0 +1,88 @@
+.user-edit-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.edit-form-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-field-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 10vw;
+  border: 2px solid #bebebe;
+  border-radius: 10px;
+}
+
+.label-name {
+  font-weight: bold;
+}
+
+.file-field {
+  margin: 2px 0 15px 0;
+  padding: 5px 15px;
+}
+
+.user-edit-form {
+  width: 100%;
+  margin: 2px 0 15px 0;
+  padding: 5px 15px;
+  border: solid 2px #bebebe;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  text-align: center;
+}
+
+.user-btn {
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 3px 25px;
+  margin: 2vh 0;
+}
+
+.user-btn:hover {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  padding: 3px 25px;
+}
+
+.user-delete-btn {
+  font-size: 16px;
+  border: 1px solid #f62e36;
+  border-radius: 5px;
+  background-color: #f62e36;
+  color: white;
+  padding: 3px 25px;
+}
+
+.user-delete-btn:hover {
+  opacity: 70%;
+}
+
+.field span {
+  font-size: 11px;
+  color: white;
+  background-color: #f62e36;
+  padding: 2px 4px;
+  border-radius: 5px;
+}

@@ -23,6 +23,9 @@
       </div>
       <div class='show-user'>
         投稿者 : <%= link_to @post.user.name, user_path(@post.user) %>
+        <% if @post.user.is_deleted %>
+        <span>( 退会済みのアカウントです )</span>
+        <% end %>
       </div>
       <div class='show-prefecture'>
         <%= link_to @post.prefecture.name, search_path(@post.prefecture) %>

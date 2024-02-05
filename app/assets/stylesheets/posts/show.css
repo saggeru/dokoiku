@@ -73,6 +73,14 @@
   text-align: center;
 }
 
+.show-user span {
+  font-size: 11px;
+  color: white;
+  background-color: #f62e36;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
 .show-prefecture {
   text-align: center;
   margin-bottom: 3vh;

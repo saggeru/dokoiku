@@ -1,0 +1,61 @@
+.user-edit-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.delete-form-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.delete-field-wrap {
+  display: flex;
+  flex-direction: column;
+  padding: 2vh 10vw;
+  border: 2px solid #bebebe;
+  border-radius: 10px;
+}
+
+.final-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin: 3vh 0 3vh 0;
+}
+
+.back-btn {
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+.delete-btn {
+  font-size: 16px;
+  color: white;
+  background-color: #f62e36;
+  border: 1px solid #f62e36;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+
+.delete-field-wrap span {
+  font-size: 20px;
+  color: #f62e36;
+}
