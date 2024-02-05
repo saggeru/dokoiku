@@ -13,7 +13,7 @@
           <%= link_to '戻る', user_path(current_user), class: 'back-btn' %>
         </div>
         <div class='final-confirmation-y'>
-          <%= link_to '退会する', withdrawal_path, data: { turbo_method: :patch, confilm: "本当に退会しますか？" }, class: 'delete-btn' %>
+          <%= link_to '退会する', withdrawal_path, data: { turbo_method: :patch, confilm: "本当に退会しますか？" }, class: 'user-delete-btn' %>
         </div>
       </div>
     </div>
