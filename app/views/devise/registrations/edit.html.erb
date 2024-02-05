@@ -1,3 +1,4 @@
+<%= render 'shared/header' %>
 <div class='user-edit-main'>
   <div class='edit-title'>
     アカウント情報 更新
@@ -58,9 +59,13 @@
       </div>
 
       <div class='edit-btn'>
-        <%= f.submit 'アカウント情報更新', class: 'user-btn' %>
+        <%= f.submit 'アカウント更新', class: 'user-btn' %>
+      </div>
+      <div class='edit-btn'>
+        <%= link_to 'アカウント削除', unsubscribe_path(current_user), class: 'user-delete-btn' %>
       </div>
     </div>
     <% end %>
   </div>
 </div>
+<%= render 'shared/footer' %>
